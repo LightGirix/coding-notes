@@ -2,6 +2,8 @@
 - [2. params](#2-params)
 - [3. static class](#3-static-class)
 - [4. Access Modifiers](#4-access-modifiers)
+- [5. Inheritance](#5-inheritance)
+- [6. Method Overriding](#6-method-overriding)
 
 Note: I have studied Java before so if you've got no basics about C#, find a video to watch. This'll cover only the differences between C# and Java.
 # 1. foreach 
@@ -52,7 +54,7 @@ In java we know static method, static variable, but we can't define a class as s
 
 Well, to be simple, static class is a class that **cannot be instantiated** and **all methods and variables** must also be static.
 
-```
+```C#
 static class Ghost
 {
   static string name;
@@ -76,3 +78,48 @@ Same as java, but not for the following:
 Java would treat any blank modifier as `package`, but for C#, here's the default access modifier if you left them blank:
 - `internal` on top-level class
 - `private` on class members
+
+# 5. Inheritance
+Not much, basically if there's this class:
+```C#
+public class Dragon
+{
+  public void Roar()
+  {
+    Console.WriteLine("The Dragon Roars!");
+  }
+}
+```
+Doing this
+```C#
+public class Drake : Dragon
+```
+Is equivalent to this in Java
+```java
+public class Drake extends Dragon
+```
+
+# 6. Method Overriding
+Not much, just a bit more complicated than Java.
+
+In Java, you could just override a method right away by declaring a method with the same name and same return type as the superclass. (Perhaps add the `@Override` overhead too)
+
+Here's how you do that in C#
+```C#
+public class Dragon
+{
+  public virtual void Roar()
+  {
+    Console.WriteLine("The Dragon Roars!");
+  }
+}
+public class Drake : Dragon
+{
+  public override void Roar()
+  {
+    Console.WriteLine("The Drake Roars!");
+  }
+}
+```
+- `virtual` declares that a method is overrideable, without this there'll be an error when attempting to override the method.
+- `override` is name-wise, declares an overriding method. Simple.
