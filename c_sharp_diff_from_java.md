@@ -1,9 +1,10 @@
 - [1. foreach](#1-foreach)
 - [2. params](#2-params)
 - [3. static class](#3-static-class)
-- [4. Access Modifiers](#4-access-modifiers)
-- [5. Inheritance](#5-inheritance)
-- [6. Method Overriding](#6-method-overriding)
+- [4. Multi-Dimensional Array](#4-multi-dimensional-array)
+- [5. Access Modifiers](#4-access-modifiers)
+- [6. Inheritance](#5-inheritance)
+- [7. Method Overriding](#6-method-overriding)
 
 Note: I have studied Java before so if you've got no basics about C#, find a video to watch. This'll cover only the differences between C# and Java.
 # 1. foreach 
@@ -78,6 +79,15 @@ Same as java, but not for the following:
 Java would treat any blank modifier as `package`, but for C#, here's the default access modifier if you left them blank:
 - `internal` on top-level class
 - `private` on class members
+# 4. Multi-Dimensional Array
+These kinds of array `int[][]`, `int[][][]` do exists in C#, these are called **jagged arrays**, the word **multi-dimensional array** 
+is actually used to call these:
+
+`int[,]`, `int[,,]`
+
+Which, on basic functionality like looping through and assigning values, they can do the exact same thing.
+
+The main differences comes to how the memory is allocated when defining these arrays, with the multidimensional array, **the memory is allocated as a single regtangular block and is allocated as a whole**, instead of being allocated independently for each sub-array. Performance-wise, multidimensional arrays is better than jagged arrays.
 
 # 5. Inheritance
 Not much, basically if there's this class:
