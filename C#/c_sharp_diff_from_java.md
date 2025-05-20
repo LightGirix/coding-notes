@@ -1,4 +1,4 @@
-# Note Syllabus
+# C# difference from Java: Note Syllabus
 - [1. foreach](#1-foreach)
 - [2. params](#2-params)
 - [3. static class](#3-static-class)
