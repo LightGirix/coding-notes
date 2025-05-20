@@ -1,9 +1,10 @@
 - [1. foreach](#1-foreach)
 - [2. params](#2-params)
 - [3. static class](#3-static-class)
+- [4. Access Modifiers](#4-access-modifiers)
 
 Note: I have studied Java before so if you've got no basics about C#, find a video to watch. This'll cover only the differences between C# and Java.
-# 1. foreach
+# 1. foreach 
 Is a range-based for loop in C# Here's the syntax:
 ```C#
 String[] names = {"A", "B", "C"};
@@ -63,3 +64,15 @@ static class Ghost
 ```
 
 Static classes are often ultility classes, one example of that is the Math class.
+# 4. Access Modifiers
+- `public` accessible from anywhere
+- `private` accessible only within the same class
+- `protected` accessible within the same class and derived (child) class
+Same as java, but not for the following:
+- `internal` accessible within the same assembly (project)
+- `protected internal` accessible within the same assembly or by derived class in any assembly
+- `private protected` accessible only in the same class or derived classes in the same assembly
+
+Java would treat any blank modifier as `package`, but for C#, here's the default access modifier if you left them blank:
+- `internal` on top-level class
+- `private` on class members
