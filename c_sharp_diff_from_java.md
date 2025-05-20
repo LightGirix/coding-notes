@@ -1,5 +1,6 @@
 - [1. foreach](#1-foreach)
 - [2. params](#2-params)
+- [3. static class](#3-static-class)
 
 Note: I have studied Java before so if you've got no basics about C#, find a video to watch. This'll cover only the differences between C# and Java.
 # 1. foreach
@@ -45,4 +46,20 @@ Note: without params, you'd have to send in this instead:
 ```C#
 new int[] {1, 2, 3, 4, 5, 6}
 ```
+# 3. static class
+In java we know static method, static variable, but we can't define a class as static  But we can now do it in C#.
 
+Well, to be simple, static class is a class that **cannot be instantiated** and **all methods and variables** must also be static.
+
+```
+static class Ghost
+{
+  static string name;
+  static void Haunt()
+  {
+    Console.WriteLine("YOU CAN NEVER ESCAPE!!!");
+  }
+}
+```
+
+Static classes are often ultility classes, one example of that is the Math class.
