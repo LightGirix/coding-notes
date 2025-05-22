@@ -10,4 +10,6 @@ In game design, this is one of the foundational model used to analyze games base
 - Dynamics: **What does the player do?** How do players interact with those mechanics? How do mechanics interact with each other?
 - Aesthetic: **What does the player feel?** What kind of emotions does the game evoke?
 
-  
+# Order of execution for event functions
+
+[Read the documentation here. It's a lot.](https://docs.unity3d.com/6000.1/Documentation/Manual/execution-order.html)
